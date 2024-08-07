@@ -1,28 +1,73 @@
 @use "../base/variables";
 
-header{
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--blue);
+  padding-block: 20px;
+
+  .burger-menu {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    background-color: var(--blue);
-    padding-block: 20px;
 
-    .burger-menu{
+    nav {
+      ul {
         display: flex;
-        align-items: center;
+        gap: 40px;
+        border-bottom: 2px solid var(--white);
 
-        nav{
-            ul{
-                display: flex;
-                gap: 40px;
+        li a {
+          color: var(--white);
+          font-size: 18px;
+          line-height: 21.78px;
 
-                li a{
-                    color: var(--white);
-                    font-size: 18px;
-                    line-height: 21.78px;
-                    border-bottom: 2px var(--red);
-                }
-            }
-        } 
+          &.this-page {
+            border-bottom: 2px solid var(--red);
+          }
+        }
+      }
     }
+  }
+  .burger-btn {
+    display: flex;
+    position: relative;
+
+    input {
+      display: none;
+    }
+    .burger {
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 5px;
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: var(--white);
+      transition: all 0.2s;
+
+      &_top {
+        top: -13px;
+      }
+      &_bottom {
+        top: 13px;
+      }
+      &_center{
+        top: 0;
+      }
+    }
+    input:checked + .burger_center {
+      width: 0px;
+    }
+    input:checked + .burger_top {
+      width: 40px;
+      rotate: 45deg;
+      top: 0;
+    }
+    input:checked + .burger_bottom {
+      width: 40px;
+      rotate: 45deg;
+      top: 0;
+    }
+  }
 }

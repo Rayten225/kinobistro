@@ -6,8 +6,9 @@ header
             ul
                 each href, text in {"Расписание": "#", "Афиша": "#", "О кинотеатре": "#"}
                     li 
-                        a(href=href) #{text}
-        .burger-btn 
-            span.burger.burger_top 
-            span.burger 
-            span.burger.burger_bottom  
+                        a.this-page(href=href) #{text}
+        .burger-btn
+            input#bur(type="checkbox", name="") 
+            label(for="bur").burger.burger_top 
+            label(for="bur").burger.burger_center
+            label(for="bur").burger.burger_bottom

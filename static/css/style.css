@@ -82,10 +82,55 @@ header .burger-menu nav ul {
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
+  border-bottom: 2px solid var(--white);
 }
 header .burger-menu nav ul li a {
   color: var(--white);
   font-size: 18px;
   line-height: 21.78px;
-  border-bottom: 2px var(--red);
+}
+header .burger-menu nav ul li a.this-page {
+  border-bottom: 2px solid var(--red);
+}
+header .burger-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+header .burger-btn input {
+  display: none;
+}
+header .burger-btn .burger {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: var(--white);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+header .burger-btn .burger_top {
+  top: -13px;
+}
+header .burger-btn .burger_bottom {
+  top: 13px;
+}
+header .burger-btn .burger_center {
+  top: 0;
+}
+header .burger-btn input:checked + .burger_center {
+  width: 0px;
+}
+header .burger-btn input:checked + .burger_top {
+  width: 40px;
+  rotate: 45deg;
+  top: 0;
+}
+header .burger-btn input:checked + .burger_bottom {
+  width: 40px;
+  rotate: 45deg;
+  top: 0;
 }

@@ -13,17 +13,22 @@
         <div class="burger-menu"> 
           <nav> 
             <ul>
-              <li> <a href="#">Расписание</a></li>
-              <li> <a href="#">Афиша</a></li>
-              <li> <a href="#">О кинотеатре</a></li>
+              <li> <a class="this-page" href="#">Расписание</a></li>
+              <li> <a class="this-page" href="#">Афиша</a></li>
+              <li> <a class="this-page" href="#">О кинотеатре</a></li>
             </ul>
           </nav>
-          <div class="burger-btn"> <span class="burger burger_top"> </span><span class="burger"> </span><span class="burger burger_bottom"> </span></div>
+          <div class="burger-btn">
+            <input id="bur" type="checkbox" name="">
+            <label class="burger burger_top" for="bur"> </label>
+            <label class="burger burger_center" for="bur"></label>
+            <label class="burger burger_bottom" for="bur"></label>
+          </div>
         </div>
       </header>
       <main></main>
       <footer></footer>
     </div>
-    <script src="../static/js/burger-manu.js"> </script>
+    <script src="../static/js/burger-menu.js"> </script>
   </body>
 </html>
