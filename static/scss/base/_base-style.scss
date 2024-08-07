@@ -12,6 +12,9 @@
 li{
     list-style: none;
 }
+a{
+    text-decoration: none;
+}
 body{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -19,7 +22,9 @@ body{
     font-size: 1rem;
     font-style: normal;
 }
-
+html{
+    scrollbar-gutter: stable;
+}
 a,
 button,
 input,
@@ -30,4 +35,11 @@ textarea{
     font-weight: 400;
     font-size: 1rem;
     font-style: normal;
+}
+.container{
+    max-width: 1440px;
+    margin: 10px auto;
+}
+.hidden{
+    display: none;
 }

@@ -14,12 +14,20 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-size: 1rem;
   font-style: normal;
+}
+
+html {
+  scrollbar-gutter: stable;
 }
 
 a,
@@ -32,4 +40,52 @@ textarea {
   font-weight: 400;
   font-size: 1rem;
   font-style: normal;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 10px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+:root {
+  --blue: rgba(84, 122, 255, 1);
+  --white: #fff;
+  --red: rgba(255, 102, 102, 1);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--blue);
+  padding-block: 20px;
+}
+header .burger-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .burger-menu nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+header .burger-menu nav ul li a {
+  color: var(--white);
+  font-size: 18px;
+  line-height: 21.78px;
+  border-bottom: 2px var(--red);
 }
