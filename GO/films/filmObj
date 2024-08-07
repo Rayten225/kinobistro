@@ -1,0 +1,19 @@
+package filmObj
+
+type Film struct {
+	ImgUrl      string `json:"img_url"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Time        string `json:"time"`
+	Genre       string `json:"genre"`
+}
+
+func NewFilm(imgUrl string, title string, description string, time string, genre string) Film {
+	return Film{
+		ImgUrl:      imgUrl,
+		Title:       title,
+		Description: description,
+		Time:        time,
+		Genre:       genre,
+	}
+}
