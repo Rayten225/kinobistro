@@ -1,0 +1,28 @@
+@use "../base/variables";
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--blue);
+    padding-block: 20px;
+
+    .burger-menu{
+        display: flex;
+        align-items: center;
+
+        nav{
+            ul{
+                display: flex;
+                gap: 40px;
+
+                li a{
+                    color: var(--white);
+                    font-size: 18px;
+                    line-height: 21.78px;
+                    border-bottom: 2px var(--red);
+                }
+            }
+        } 
+    }
+}
