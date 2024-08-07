@@ -1,1 +1,13 @@
-header 
+header
+    section.logo 
+        img(src="", alt="")
+        h1 Кино-Быстро
+    .burger-menu 
+        nav 
+            each href, text in {"Расписание": "#", "Афиша": "#", "О кинотеатре": "#"}
+                li 
+                    a(href=href) #{text}
+        .burger-btn 
+            span.burger.burger_top 
+            span.burger 
+            span.burger.burger_bottom  
