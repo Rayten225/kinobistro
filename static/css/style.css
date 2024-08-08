@@ -53,10 +53,37 @@ textarea {
   display: none;
 }
 
+.btn {
+  background: transparent;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 500px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.btn:not(.btn:disabled):hover {
+  background: var(--block-gradient);
+  color: var(--white);
+}
+.btn:disabled {
+  background-color: var(--dark-grey);
+  border: 2px solid transparent;
+  color: var(--grey);
+}
+
 :root {
   --blue: rgba(84, 122, 255, 1);
   --white: #fff;
   --red: rgba(255, 102, 102, 1);
+  --pink: rgba(255, 102, 102, 0.8);
+  --grey: rgba(240, 240, 240, 1);
+  --text-gradient: linear-gradient(90deg, var(--blue) 0%, var(--red) 50%);
+  --block-gradient: linear-gradient(90deg, var(--blue) 0%, var(--red) 100%);
+  --dark-grey:rgba(0, 0, 0, 0.5);
 }
 
 header {
@@ -168,4 +195,44 @@ header .burger-menu .menu.open .icon::after {
   top: 0px;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
+}
+
+main .title .container h1 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.73px;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .times {
+  background-color: var(--grey);
+}
+main .times .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .times .container .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-block: 10px;
+  background: var(--block-gradient);
+  color: var(--white);
+  width: 130px;
+  font-weight: 400;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+main .times .container .time:hover {
+  background: var(--pink);
 }

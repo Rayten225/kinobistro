@@ -6,8 +6,37 @@ block head
 
 block content 
     main
-        .container 
-            
+        article.title 
+            .container 
+                h1 Расписание сеансов кинотеатра
+        section.times 
+            .container
+                each daytime in ["сегодня", "завтра", "день недели"]
+                    .time
+                        h3 00:00
+                        h4 #{daytime}
+        sectiion.kines 
+            .container 
+                each kin in ["2D", "3D", "3D"]
+                    .kino 
+                        .kino__left 
+                            img(src="", alt="", data-kin=kin)
+                            .text 
+                                h1 Название
+                                p Жанр
+                                p 
+                                    | Продолжительность :  
+                                    span Время
+                                button(disabled).btn.btn_see-seans Посмотреть сеансы
+                        .kino__right 
+                            - var time = 0
+                            while time < 3
+                                div
+                                    button.btn.btn_time-kino 00:00
+                                    p Цена
+                                - time++
+
+
 
 block js 
-    script(src="../static/js/burger-menu.js") 
+    script(src="../static/js/burger-menu.js")

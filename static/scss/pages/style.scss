@@ -1,4 +1,39 @@
 @import "../base/base-style";
 @import "../models/header";
 
+main{
+    .title .container h1{
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 38.73px;
+        background: var(--text-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .times{
+        background-color: var(--grey);
+
+        .container{
+            display: flex;
+
+            .time{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                padding-block: 10px;
+                background: var(--block-gradient);
+                color: var(--white);
+                width: 130px;
+                font-weight: 400;
+                transition: all .2s;
+
+                &:hover{
+                    background: var(--pink);
+                }
+            }
+        } 
+    }
+}
+
 @import "../models/footer";

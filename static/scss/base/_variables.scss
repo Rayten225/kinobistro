@@ -2,4 +2,9 @@
     --blue: rgba(84, 122, 255, 1);
     --white: #fff;
     --red: rgba(255, 102, 102, 1);
+    --pink: rgba(255, 102, 102, 0.8);
+    --grey: rgba(240, 240, 240, 1);
+    --text-gradient: linear-gradient(90deg, var(--blue) 0%, var(--red) 50%);
+    --block-gradient: linear-gradient(90deg, var(--blue) 0%, var(--red) 100%);
+    --dark-grey:rgba(0, 0, 0, 0.5);
 }

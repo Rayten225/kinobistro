@@ -45,3 +45,24 @@ textarea{
 .hidden{
     display: none;
 }
+.btn{
+    background: transparent;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 500px;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:not(&:disabled):hover{
+        background: var(--block-gradient);
+        color: var(--white);
+    }
+    &:disabled{
+        background-color: var(--dark-grey);
+        border: 2px solid transparent;
+        color: var(--grey);
+    }
+}
