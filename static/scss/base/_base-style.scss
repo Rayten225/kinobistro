@@ -24,6 +24,7 @@ body{
 }
 html{
     scrollbar-gutter: stable;
+    overflow-x: hidden;
 }
 a,
 button,
@@ -39,6 +40,7 @@ textarea{
 .container{
     max-width: 1440px;
     margin: 10px auto;
+    padding: 0 20px;
 }
 .hidden{
     display: none;

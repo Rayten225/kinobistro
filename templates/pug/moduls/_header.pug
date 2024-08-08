@@ -1,14 +1,12 @@
 header
     section.logo 
-        img(src="../static/img/logo.svg", alt="")
+        a(href="/index") 
+            img(src="../static/img/logo.svg", alt="")
     .burger-menu 
         nav 
             ul
                 each href, text in {"Расписание": "#", "Афиша": "#", "О кинотеатре": "#"}
                     li 
                         a.this-page(href=href) #{text}
-        .burger-btn
-            input#bur(type="checkbox", name="") 
-            label(for="bur").burger.burger_top 
-            label(for="bur").burger.burger_center
-            label(for="bur").burger.burger_bottom
+        .burger.menu 
+            .icon

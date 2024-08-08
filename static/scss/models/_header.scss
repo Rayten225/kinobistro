@@ -28,46 +28,67 @@ header {
         }
       }
     }
-  }
-  .burger-btn {
-    display: flex;
-    position: relative;
-
-    input {
+    .menu{
+      width: 80px;
+      height: 80px;
+      position: relative;
+      transition-duration: 1s;
       display: none;
-    }
-    .burger {
-      display: block;
-      position: absolute;
-      width: 40px;
-      height: 5px;
-      border-radius: 20px;
+      margin: 40px;
       cursor: pointer;
-      background-color: var(--white);
-      transition: all 0.2s;
 
-      &_top {
-        top: -13px;
-      }
-      &_bottom {
-        top: 13px;
-      }
-      &_center{
-        top: 0;
+      .icon{
+        height: 10px;
+        width: 50px;
+        top: 30px;
+        background-color: var(--white);
+        border-radius: 20px;
+        position: absolute;
+        transition-duration: 0.5s;
+        transition-delay: 0.5s;
+    
+        &:before{
+          left: 0;
+          position: absolute;
+          top: -15px;
+          height: 10px;
+          width: 50px;
+          background-color: var(--white);
+          content: "";
+          border-radius: 20px;
+          transition: transform 0.5s, top 0.5s 0.5s;
+        }
+    
+        &:after{
+          left: 0;
+          position: absolute;
+          top: 15px;
+          height: 10px;
+          width: 50px;
+          background-color: var(--white);
+          content: "";
+          border-radius: 20px;
+          transition: transform 0.5s, top 0.5s 0.5s;
+        }
       }
     }
-    input:checked + .burger_center {
-      width: 0px;
-    }
-    input:checked + .burger_top {
-      width: 40px;
-      rotate: 45deg;
-      top: 0;
-    }
-    input:checked + .burger_bottom {
-      width: 40px;
-      rotate: 45deg;
-      top: 0;
+    .menu.open{
+      .icon{
+        transition-duration: 0.1s;
+        transition-delay: 0.5s;
+        background: transparent;
+
+        &::before{
+          transition: top 0.5s, transform 0.5s 0.5s;
+          top: 0px;
+          transform: rotateZ(-45deg);
+        }
+        &::after{
+          transition: top 0.4s, transform 0.5s 0.5s;
+          top: 0px;
+          transform: rotateZ(45deg); 
+        }
+      }
     }
   }
 }
